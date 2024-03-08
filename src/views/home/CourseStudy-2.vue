@@ -1,8 +1,8 @@
 <template>
   <v-app id="home" class="app_home">
     <NavBar />
-    <v-main style="opacity: 0.9" >
-      <v-row class="d-flex flex-column text-center" >
+    <v-main style="opacity: 0.9" fluid>
+      <v-row class="ma-0 d-flex flex-column text-center" >
         <!-- Vuetify的布局系统基于Flexbox，它会自动调整元素的大小和位置以适应不同的屏幕尺寸。如果你的v-row在小屏幕上有额外的空间，可能是因为它的高度被自动调整了 -->
         <span class="text-grey-lighten-3 mt-md-10 mb-4 bg-blue-grey-darken-1" style="font-size: 2rem;opacity: 0.7">CourseStudy</span>
         <v-carousel  cycle height="460" hide-delimiter-background show-arrows="hover">    <!--Q：如何把carousel設為寬度全滿? fluid? full-width? A: v-row設ma-0搞定 -->
@@ -52,7 +52,7 @@ import NavBar from '@/components/NavBar.vue';
 import FooterView from '@/components/FooterView.vue';
 
 export default defineComponent({
-  name: 'HomeView',
+  name: 'CourseStudy',
   setup() {
     return {
       courseStudy_items: [

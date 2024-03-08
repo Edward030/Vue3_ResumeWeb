@@ -6,7 +6,7 @@ const Specialist = () => import('../views/home/Specialist-3.vue');
 const Photography = () => import('../views/home/Photography-4.vue');
 const Projects = () => import('../views/home/Projects-5.vue');
 // other pages
-const Page2 = () => import('../views/page2/page2.vue');
+const iScroll = () => import('../views/iScroll/iScroll.vue');
 const Page3 = () => import('../views/page3/page3.vue');
 const Page4 = () => import('../views/page4/page4.vue');
 
@@ -37,9 +37,9 @@ const routes = [
     component: Projects,
   },
   {
-    path: '/page2',
-    name: 'Page2',
-    component: Page2,
+    path: '/iScroll',
+    name: 'iScroll',
+    component: iScroll,
   },
   {
     path: '/page3',
@@ -54,8 +54,8 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(process.env.BASE_URL), // 避免頁面操作產生刷新頁面的效果
   routes
 })
 
-export default router
+export default router;

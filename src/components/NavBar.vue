@@ -1,5 +1,5 @@
 <template>
-  <div v-resize="onResize" v-cloak >
+  <div v-resize="onResize" v-cloak > 
     <!--因為NavBar是組件，修改組件至目標頁面時要刷新頁面，否則組件無法即時渲染(更新)-->
     <v-navigation-drawer v-if="isLargeScreen" permanent style="opacity: 0.6">
       <div class="bg-indigo-darken-4" style="height: 100%;">
@@ -53,10 +53,10 @@
   </div>
   <v-app-bar app class="px-12" color="blue-grey-darken-3" style="opacity: 0.8;z-index: 2;" v-cloak>
     <v-spacer></v-spacer>
-    <v-btn text @click="goToHome('/')" class="text-white font-size">Home</v-btn>
-    <v-btn text @click="goToHome('/page2')" class="text-white font-size">Page2</v-btn>
-    <v-btn text @click="goToHome('/page3')" class="text-white font-size">Page3</v-btn>
-    <v-btn text @click="goToHome('/page4')" class="text-white font-size">Page4</v-btn>
+    <v-btn text @click="goToHome('/')" class="text-white font-size no-uppercase">Home</v-btn>
+    <v-btn text @click="goToHome('/iScroll')" class="text-white font-size no-uppercase">iScroll</v-btn>
+    <v-btn text @click="goToHome('/page3')" class="text-white font-size no-uppercase">Page3</v-btn>
+    <v-btn text @click="goToHome('/page4')" class="text-white font-size no-uppercase">Page4</v-btn>
   </v-app-bar>
 </template>
 <script>
@@ -119,6 +119,9 @@ export default {
   }
   [v-cloak] {
     display: none;
+  }
+  .no-uppercase {
+    text-transform: unset;
   }
 </style>
 
